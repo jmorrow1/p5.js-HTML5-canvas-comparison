@@ -1,1 +1,1 @@
-p5.fill("0000AA");	ctx.fillStyle = "#0000AA";
+p5.fill('0000AA');	ctx.fillStyle = '#0000AA';
