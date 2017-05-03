@@ -1,1 +1,3 @@
 p5.fill('#0000AA');	ctx.fillStyle = '#0000AA';
+p5.stroke('#0000AA');	ctx.strokeStyle = '#0000AA';
+p5.strokeCap(ROUND);	ctx.lineCap = "round";
