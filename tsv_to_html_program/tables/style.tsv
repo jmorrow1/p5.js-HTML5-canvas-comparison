@@ -1,0 +1,33 @@
+p5.js	canvas.createContext("2D")	Notes
+ctx.fillStyle = 'blue';	p5.fill('blue');	Sets the fill style to blue.
+ctx.fillStyle = 'rgb(0,0,255)';	p5.fill('rgb(0,0,255)');	Sets the fill style to red.
+No equivalent	p5.fill(255);	Sets the fill style to white.
+No equivalent	p5.fill(255, 0, 0);	Sets the fill style to red.
+No equivalent	p5.fill(255, 0, 0, 125);	Sets the fill style to a semi-opaque red.
+ctx.fillStyle = '#0000AA';	p5.fill('#0000AA');	Sets the fill style to blue.
+var grad = ctx.createLinearGradient(0,0,200,0);NEW_LINEgrad.addColorStop(0,"red");NEW_LINEgrad.addColorStop(1,"white");NEW_LINEctx.fillStyle = grad;	No equivalent	Sets the fill style to a gradient.
+var img = document.getElementById("myImg");NEW_LINEvar pat = ctx.createPattern(img,"repeat");NEW_LINEctx.fillStyle = pat;	No equivalent (but see p5.image())	Sets the fill style to a repeating image.
+ctx.font = "48px serif";	var f = p5.loadFont('assets/serif.otf');NEW_LINEp5.textFont(f);	Sets the font to a 48 pixel serif.
+ctx.globalCompositeOperation = "source-in"	No equivalent	Changes the way shapes are composed.
+ctx.lineCap = 'butt';	p5.strokeCap(SQUARE);	Sets the stroke cap to a square shape that doesn't extend.
+ctx.lineCap = 'round';	p5.strokeCap(ROUND);	Sets the stroke cap to a round shape.
+ctx.lineCap = 'square';	p5.strokeCap(PROJECT);	Sets the stroke cap to a square shape that does extend.
+ctx.lineDashOffset = 2;	No equivalent.	Changes the spacing between dashes in a dashed line.
+ctx.lineJoin = 'bevel';	p5.strokeJoin(BEVEL);	Styles the joints that connect line segments as squared corners.
+ctx.lineJoin = 'round';	p5.strokeJoin(ROUND);	Styles the joints that connect line segments as rounded corners.
+ctx.lineJoin = 'miter';	p5.strokeJoin(MITER);	Styles the joints that connect line segments as sharp 90 degree angles.
+ctx.lineWidth = 5;	p5.strokeWeight(5);	Sets the thickness of lines.
+ctx.miterLimt = 10;	No equivalent	Sets the miter limit ratio in space units.
+ctx.shadowBlur = 10;	No equivalent	Sets the blurring value to 10 (the larger the blurring value, the stronger the effect).
+ctx.shadowColor = 'black';	No equivalent	Sets the shadow color to black.
+ctx.shadowOffsetX = 10;	No equivalent	Sets the horizontal offset of the shadow to 10.
+ctx.shadowOffsetY = 10;	No equivalent	Sets the vertical offset of the shadow to 10.
+ctx.strokeStyle = 'blue';	p5.stroke('blue');	Sets the stroke style to blue
+ctx.strokeStyle = 'rgb(0,0,255)';	p5.stroke('rgb(0,0,255)');	Sets the stroke style to blue.
+No equivalent	p5.stroke(255);	Sets the stroke style to white.
+No equivalent	p5.stroke(255, 0, 0);	Sets the stroke style to red.
+No equivalent	p5.stroke(255, 0, 0, 125);	Sets the stroke style to a semi-opaque red.
+ctx.strokeStyle = '#0000AA';	p5.stroke('#0000AA');	Sets the stroke style to blue.
+ctx.textAlign = 'left';	ctx.textBaseline = 'top';	p5.textAlign(LEFT, TOP);	Sets text to align such that any given coordinates are interpreted as the upper left corner of the text.
+No equivalent	p5.textLeading(10);	Sets the spacing between lines of text to 10 pixels.
+No equivalent	P5.textStyle(ITALIC);	Sets the text style to italic.
