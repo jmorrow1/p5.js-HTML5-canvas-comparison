@@ -4,7 +4,7 @@ import java.util.Arrays;
 String[] inputSrcPaths = new String[] {
   "\\tables\\style.tsv"
 };
-String outputSrcPath = "\\..\\readme.md";
+String outputSrcPath = "\\..\\index.html";
 
 final String tab = "  ";
 final String tab2 = tab + tab;

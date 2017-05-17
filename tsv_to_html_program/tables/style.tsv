@@ -28,6 +28,6 @@ No equivalent	p5.stroke(255);	Sets the stroke style to white.
 No equivalent	p5.stroke(255, 0, 0);	Sets the stroke style to red.
 No equivalent	p5.stroke(255, 0, 0, 125);	Sets the stroke style to a semi-opaque red.
 ctx.strokeStyle = '#0000AA';	p5.stroke('#0000AA');	Sets the stroke style to blue.
-ctx.textAlign = 'left';	ctx.textBaseline = 'top';	p5.textAlign(LEFT, TOP);	Sets text to align such that any given coordinates are interpreted as the upper left corner of the text.
+ctx.textAlign = 'left';NEW_LINEctx.textBaseline = 'top';	p5.textAlign(LEFT, TOP);	Sets text to align such that any given coordinates are interpreted as the upper left corner of the text.
 No equivalent	p5.textLeading(10);	Sets the spacing between lines of text to 10 pixels.
 No equivalent	P5.textStyle(ITALIC);	Sets the text style to italic.
