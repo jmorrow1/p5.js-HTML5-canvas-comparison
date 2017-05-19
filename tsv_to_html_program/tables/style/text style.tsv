@@ -1,0 +1,6 @@
+Text Style
+p5.js	canvas.createContext("2D")	Notes
+ctx.font = "48px serif";	var f = p5.loadFont('assets/serif.otf');NEW_LINEp5.textFont(f);	Sets the font to a 48 pixel serif.
+ctx.textAlign = 'left';NEW_LINEctx.textBaseline = 'top';	p5.textAlign(LEFT, TOP);	Sets text to align such that any given coordinates are interpreted as the upper left corner of the text.
+No equivalent	p5.textLeading(10);	Sets the spacing between lines of text to 10 pixels.
+No equivalent	p5.textStyle(ITALIC);	Sets the text style to italic.

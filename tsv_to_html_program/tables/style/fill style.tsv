@@ -1,0 +1,10 @@
+Fill Style
+p5.js	canvas.createContext("2D")	Notes
+ctx.fillStyle = 'blue';	p5.fill('blue');	Sets the fill style to blue.
+ctx.fillStyle = 'rgb(0,0,255)';	p5.fill('rgb(0,0,255)');	Sets the fill style to red.
+No equivalent	p5.fill(255);	Sets the fill style to white.
+No equivalent	p5.fill(255, 0, 0);	Sets the fill style to red.
+No equivalent	p5.fill(255, 0, 0, 125);	Sets the fill style to a semi-opaque red.
+ctx.fillStyle = '#0000AA';	p5.fill('#0000AA');	Sets the fill style to blue.
+var grad = ctx.createLinearGradient(0,0,200,0);NEW_LINEgrad.addColorStop(0,"red");NEW_LINEgrad.addColorStop(1,"white");NEW_LINEctx.fillStyle = grad;	No equivalent	Sets the fill style to a gradient.
+var img = document.getElementById("myImg");NEW_LINEvar pat = ctx.createPattern(img,"repeat");NEW_LINEctx.fillStyle = pat;	No equivalent (but see p5.image())	Sets the fill style to a repeating image.

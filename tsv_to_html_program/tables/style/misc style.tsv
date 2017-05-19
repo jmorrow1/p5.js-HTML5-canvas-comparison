@@ -1,0 +1,7 @@
+Miscellaneous Style
+p5.js	canvas.createContext("2D")	Notes
+ctx.globalCompositeOperation = "source-in"	No equivalent	Changes the way shapes are composed.
+ctx.shadowBlur = 10;	No equivalent	Sets the blurring value to 10 (the larger the blurring value, the stronger the effect).
+ctx.shadowColor = 'black';	No equivalent	Sets the shadow color to black.
+ctx.shadowOffsetX = 10;	No equivalent	Sets the horizontal offset of the shadow to 10.
+ctx.shadowOffsetY = 10;	No equivalent	Sets the vertical offset of the shadow to 10.

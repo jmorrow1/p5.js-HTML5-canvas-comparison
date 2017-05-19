@@ -7,137 +7,12 @@
 <p>A comparison of the APIs of p5.js and the HTML5 Canvas</p>
 
 <table>
+  <caption class="table-header">Stroke Style</caption>
 
   <tr>
     <th>p5.js</th>
     <th>canvas.createContext("2D")</th>
     <th>Notes</th>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">ctx.fillStyle = 'blue';</pre>
-    </td>
-    <td>
-      <pre lang="javascript">p5.fill('blue');</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the fill style to blue.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">ctx.fillStyle = 'rgb(0,0,255)';</pre>
-    </td>
-    <td>
-      <pre lang="javascript">p5.fill('rgb(0,0,255)');</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the fill style to red.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">p5.fill(255);</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the fill style to white.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">p5.fill(255, 0, 0);</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the fill style to red.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">p5.fill(255, 0, 0, 125);</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the fill style to a semi-opaque red.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">ctx.fillStyle = '#0000AA';</pre>
-    </td>
-    <td>
-      <pre lang="javascript">p5.fill('#0000AA');</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the fill style to blue.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">var grad = ctx.createLinearGradient(0,0,200,0);
-grad.addColorStop(0,"red");
-grad.addColorStop(1,"white");
-ctx.fillStyle = grad;</pre>
-    </td>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the fill style to a gradient.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">var img = document.getElementById("myImg");
-var pat = ctx.createPattern(img,"repeat");
-ctx.fillStyle = pat;</pre>
-    </td>
-    <td>
-      <pre lang="javascript">No equivalent (but see p5.image())</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the fill style to a repeating image.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">ctx.font = "48px serif";</pre>
-    </td>
-    <td>
-      <pre lang="javascript">var f = p5.loadFont('assets/serif.otf');
-p5.textFont(f);</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the font to a 48 pixel serif.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">ctx.globalCompositeOperation = "source-in"</pre>
-    </td>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Changes the way shapes are composed.</pre>
-    </td>
   </tr>
 
   <tr>
@@ -250,54 +125,6 @@ p5.textFont(f);</pre>
 
   <tr>
     <td>
-      <pre lang="javascript">ctx.shadowBlur = 10;</pre>
-    </td>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the blurring value to 10 (the larger the blurring value, the stronger the effect).</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">ctx.shadowColor = 'black';</pre>
-    </td>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the shadow color to black.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">ctx.shadowOffsetX = 10;</pre>
-    </td>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the horizontal offset of the shadow to 10.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <pre lang="javascript">ctx.shadowOffsetY = 10;</pre>
-    </td>
-    <td>
-      <pre lang="javascript">No equivalent</pre>
-    </td>
-    <td>
-      <pre lang="javascript">Sets the vertical offset of the shadow to 10.</pre>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
       <pre lang="javascript">ctx.strokeStyle = 'blue';</pre>
     </td>
     <td>
@@ -368,6 +195,140 @@ p5.textFont(f);</pre>
     </td>
   </tr>
 
+</table>
+<table>
+  <caption class="table-header">Fill Style</caption>
+
+  <tr>
+    <th>p5.js</th>
+    <th>canvas.createContext("2D")</th>
+    <th>Notes</th>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.fillStyle = 'blue';</pre>
+    </td>
+    <td>
+      <pre lang="javascript">p5.fill('blue');</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the fill style to blue.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.fillStyle = 'rgb(0,0,255)';</pre>
+    </td>
+    <td>
+      <pre lang="javascript">p5.fill('rgb(0,0,255)');</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the fill style to red.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">p5.fill(255);</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the fill style to white.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">p5.fill(255, 0, 0);</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the fill style to red.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">p5.fill(255, 0, 0, 125);</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the fill style to a semi-opaque red.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.fillStyle = '#0000AA';</pre>
+    </td>
+    <td>
+      <pre lang="javascript">p5.fill('#0000AA');</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the fill style to blue.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">var grad = ctx.createLinearGradient(0,0,200,0);
+grad.addColorStop(0,"red");
+grad.addColorStop(1,"white");
+ctx.fillStyle = grad;</pre>
+    </td>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the fill style to a gradient.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">var img = document.getElementById("myImg");
+var pat = ctx.createPattern(img,"repeat");
+ctx.fillStyle = pat;</pre>
+    </td>
+    <td>
+      <pre lang="javascript">No equivalent (but see p5.image())</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the fill style to a repeating image.</pre>
+    </td>
+  </tr>
+
+</table>
+<table>
+  <caption class="table-header">Text Style</caption>
+
+  <tr>
+    <th>p5.js</th>
+    <th>canvas.createContext("2D")</th>
+    <th>Notes</th>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.font = "48px serif";</pre>
+    </td>
+    <td>
+      <pre lang="javascript">var f = p5.loadFont('assets/serif.otf');
+p5.textFont(f);</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the font to a 48 pixel serif.</pre>
+    </td>
+  </tr>
+
   <tr>
     <td>
       <pre lang="javascript">ctx.textAlign = 'left';
@@ -398,10 +359,80 @@ ctx.textBaseline = 'top';</pre>
       <pre lang="javascript">No equivalent</pre>
     </td>
     <td>
-      <pre lang="javascript">P5.textStyle(ITALIC);</pre>
+      <pre lang="javascript">p5.textStyle(ITALIC);</pre>
     </td>
     <td>
       <pre lang="javascript">Sets the text style to italic.</pre>
+    </td>
+  </tr>
+
+</table>
+<table>
+  <caption class="table-header">Miscellaneous Style</caption>
+
+  <tr>
+    <th>p5.js</th>
+    <th>canvas.createContext("2D")</th>
+    <th>Notes</th>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.globalCompositeOperation = "source-in"</pre>
+    </td>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Changes the way shapes are composed.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.shadowBlur = 10;</pre>
+    </td>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the blurring value to 10 (the larger the blurring value, the stronger the effect).</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.shadowColor = 'black';</pre>
+    </td>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the shadow color to black.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.shadowOffsetX = 10;</pre>
+    </td>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the horizontal offset of the shadow to 10.</pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre lang="javascript">ctx.shadowOffsetY = 10;</pre>
+    </td>
+    <td>
+      <pre lang="javascript">No equivalent</pre>
+    </td>
+    <td>
+      <pre lang="javascript">Sets the vertical offset of the shadow to 10.</pre>
     </td>
   </tr>
 

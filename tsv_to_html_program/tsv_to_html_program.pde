@@ -1,8 +1,13 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
+String path = "\\tables\\";
+
 String[] inputSrcPaths = new String[] {
-  "\\tables\\style.tsv"
+  path + "style\\stroke style.tsv",
+  path + "style\\fill style.tsv",
+  path + "style\\text style.tsv",
+  path + "style\\misc style.tsv"
 };
 String outputSrcPath = "\\..\\index.html";
 
@@ -52,6 +57,11 @@ void writeTable(PrintWriter writer, String inputSrcPath) throws IOException {
   
   //start table
   writer.println("<table>");
+  
+  //write a table caption
+  if (scanner.hasNextLine()) {
+    writer.println(tab + "<caption class=\"table-header\">" + scanner.nextLine() + "</caption>");
+  }
   
   //read / write row of header cells
   if (scanner.hasNextLine()) {
