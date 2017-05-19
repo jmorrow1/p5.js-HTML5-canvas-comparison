@@ -15,16 +15,31 @@ void setup() {
     //create writer to write to the output document
     PrintWriter writer = new PrintWriter(new File(sketchPath() + outputSrcPath), "UTF-8");
     
+    //write doctype declaration and html tag
+    writer.println("<!DOCTYPE html>");
+    writer.println("<html>");
+    writer.println();
+    
+    //link style sheet
+    writer.println("<link href=\"style.css\" rel=\"stylesheet\">");
+    writer.println();
+    
     //write heading
-    writer.println("# p5.js-HTML5-canvas-comparison");
+    writer.println("<h3>HTML5 / p5.js API Comparison</h3>");
     
     //write description
-    writer.println("A comparison of the APIs of p5.js and the HTML5 Canvas");
+    writer.println("<p>A comparison of the APIs of p5.js and the HTML5 Canvas</p>");
     writer.println();
     
     for (int i=0; i<inputSrcPaths.length; i++) {
       writeTable(writer, inputSrcPaths[i]);
     }
+    
+    //close html tag
+    writer.println("</html>");
+    
+    //close writer
+    writer.close();
     
   } catch (IOException e) {
     println(e);
@@ -51,10 +66,6 @@ void writeTable(PrintWriter writer, String inputSrcPath) throws IOException {
   //end table
   writer.println();
   writer.println("</table>");
-
-  //close writer
-  writer.close();
-  println("done");
 }
 
 void writeRow(String inputRow, PrintWriter writer, boolean isHeader) {
